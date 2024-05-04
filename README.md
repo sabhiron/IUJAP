@@ -128,14 +128,11 @@ Before you begin, ensure you have the following prerequisites installed:
 ## Screenshots
 
 ### Admin Page
-![Admin Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/e4c9f2d8-6b8e-44de-a63d-f7e5db45383e)
 
 ### Student Page
-![Student Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/a8e2f4a7-831c-4ac5-8e1b-c917a9ca9001)
+
 
 ### Submission Successful Page
-![Submission Successful Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/0f77779e-7648-4356-84c0-7db58b3e786c)
-
 ## Contributions
 
 We welcome contributions from the community! If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
@@ -143,4 +140,4 @@ We welcome contributions from the community! If you'd like to contribute to this
 ## Developers
 Created by Team Hokage during the Live The Code 2.0 Hackathon.
 
-Contributors: [Mohd Azeem](https://github.com/AzeemIdrisi), [Dheeraj Jha](https://github.com/Dheerajjha451), [Shantanu Pant](https://github.com/Shanty34)
+Contributors: [Abhishek Sharma](https://github.com/sabhrion), Manoj Dhawan, Ravi Saini, Arvind
