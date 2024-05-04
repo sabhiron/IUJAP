@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Submitted - College Attendance Portal</title>
+    <link rel="stylesheet" href="{% static 'StudentView/submitted.css' %}" />
+    <link rel="stylesheet" href="{% static 'StudentView/Index_Style.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">ICFAI University (Jaipur)</h1>
+      <h2>Attendance Portal</h2>
+      <div class="header">
+        <div class="user-info-container">
+          {% if user.is_authenticated %}
+              <form method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button type="submit" class="user-info-button">Logout</button>
+              </form>
+          {% else %}
+              <p class="login-error">Please <a href="{% url 'login' %}" class="user-info-button">Login</a> to mark attendance.</p>
+          {% endif %}
+    
+      </div>
+    
+    </header>
+
+    <div class="container">
+      <h2>Attendance submitted successfully.</h2>
+      <br />
+      <h2>You may close this page.</h2>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; QR Attendance System 2024 - Team Learning Outlaws</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #F44336; /* Red background */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.attendance-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+}
+
+.student {
+  margin-bottom: 10px;
+}
+
+.student-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.student-label:hover {
+  background-color: #e0e0e0;
+}
+.welcome-message {
+  background-color: #F44336;
+  color: #Fff; /* Red font color */
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 10px; /* Optional: Add spacing below the welcome message */
+}
+
+.username {
+  color: #fff; /* White font color for username */
+}
+.user-info-container {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block; /* Ensures container size fits its contents */
+}
+
+.user-info-button {
+  background-color: #F44336;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+.user-info-box {
+  border-top: 2px solid #007bff;
+  padding-top: 10px;
+}
+.user-info-button:hover {
+  background-color: #D32F2F; /* Darker red on hover */
+}
+
+.user-info-container p {
+  margin: 0; /* Remove default margin for <p> tag */
+}
+.login-error {
+  color: #F44336; /* Red color matching your theme */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.submit-button {
+  background-color: #F44336; /* Changed background color to red */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #D32F2F; /* Changed hover background color to a darker red */
+}
+.stu-details {
+  margin-left: 20px;
+}
+
+.stu-details p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #F44336;
+}
+.footer {
+  background-color: #F44336; /* Changed background color to red */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+}

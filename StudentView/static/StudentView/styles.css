@@ -1,0 +1,37 @@
+/* Styling for user info section */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    margin-right: 20px;
+    font-weight: bold;
+    color: #333;  /* Adjust text color to match your theme */
+}
+
+.user-info button {
+    padding: 10px 20px;
+    background-color: #F44336; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #D32F2F; /* Darker red on hover */
+}
+
+.user-info a {
+    text-decoration: none;
+    color: #333; /* Text color for login link */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.user-info a:hover {
+    color: #F44336; /* Red color on hover */
+}

@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICFAI University (Jaipur) - Attendance Portal</title>
+    <link rel="stylesheet" href="{% static 'StudentView/Index_Style.css' %}" />
+    <link rel="stylesheet" href="{% static 'StudentViewIndex/styles.css' %}">
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">ICFAI University (Jaipur)</h1>
+      <h2>Attendance Portal</h2>
+      <div class="header">
+        <div class="user-info-container">
+          {% if user.is_authenticated %}
+              <form method="post" action="{% url 'logout' %}">
+                  {% csrf_token %}
+                  <button type="submit" class="user-info-button">Logout</button>
+              </form>
+          {% else %}
+              <p class="login-error">Please <a href="{% url 'login' %}" class="user-info-button">Login</a> to mark attendance.</p>
+          {% endif %}
+    
+      </div>
+    
+    </header>
+
+    <div class="container">
+      <section class="attendance-section">
+        <h2 class="section-title">Student Details</h2>
+        <form
+          class="attendance-form"
+          method="POST"
+          action="{% url 'add_manually_post' %}"
+        >
+          {% csrf_token %}
+          <ul class="student-list">
+            {% for student in students %}
+             {% if user.is_authenticated and user.username == student.s_roll %}
+            <div class="user-details">
+              <div class="welcome-message">
+                Welcome, <span class="username">{{ student.s_fname }} {{ student.s_lname }}</span>!
+              </div>
+                <div class="stu-details">
+                  <p><strong>Enrollment Number:</strong> {{ student.s_roll }}</p>
+                  <p><strong>Branch:</strong> {{ student.s_branch }}</p>
+                  <p><strong>Year:</strong> {{ student.s_year }}</p>
+                  <p><strong>Semester:</strong> {{ student.s_section }}</p>
+              </div>
+            <li class="student">
+              <label class="student-label">
+                <span>
+                  Please check the box to mark your attendance.
+                </span>
+                <span class="checkmark"></span>
+                <input
+                  type="checkbox"
+                  class="student-checkbox"
+                  name="student-name"
+                  value="{{student.s_roll}}"
+                />
+              </label>
+            </li>
+          {% endif %}
+            {% endfor %}
+          </ul>
+          <button type="submit" class="submit-button">Submit Attendance</button>
+        </form>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; QR Attendance System 2024 - Team Learning Outlaws</p>
+    </footer>
+
+    <script>
+      const checkboxes = document.querySelectorAll(".student");
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          checkboxes.forEach((otherCheckbox) => {
+            if (otherCheckbox !== checkbox) {
+              otherCheckbox.querySelector(".student-checkbox").checked = false;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
