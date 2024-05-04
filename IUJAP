@@ -1,0 +1,44 @@
+#!/bin/bash
+
+function start() {
+    python3 manage.py runserver 0.0.0.0:8000
+}
+
+function refresh() {
+    # Add your refresh logic here
+    python3 manage.py flush --noinput
+    python3 manage.py migrate
+    python3 manage.py loaddata initial_data.json
+    echo "Refreshing..."
+}
+
+function pause() {
+    # Add your pause logic here
+    echo "Pausing..."
+}
+
+function migrate() {
+    # Add your migrate logic here
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    echo "Migrating..."
+}
+
+# Check the command line argument and call the corresponding function
+case "$1" in
+    "start")
+        start
+        ;;
+    "refresh")
+        refresh
+        ;;
+    "pause")
+        pause
+        ;;
+    "migrate")
+        migrate
+        ;;
+    *)
+        echo "Invalid option. Usage: ./start [start|refresh|pause|migrate]"
+        ;;
+esac

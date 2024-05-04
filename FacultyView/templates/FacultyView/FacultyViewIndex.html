@@ -18,21 +18,22 @@
     </header>
     <main>
       <div class="marked-list">
-        <h2>Present Count : {{ students|length }}</h2>
+        <h2>Present Count: {{ students|length }}</h2>
         <h3 class="present-list">Present Students</h3>
 
         <form class="attendance-form" method="POST">
+          {% csrf_token %}
           <ul class="student-list">
-            {% csrf_token %} {% for student in students %}
+            {% for student in students %}
             <li class="student">
               <label class="student-label">
                 <span class="student-name">
-                  {{student.s_roll}} - {{ student.s_fname }} {{student.s_lname}}
+                  {{ student.s_roll }} - {{ student.s_fname }} {{ student.s_lname }}
                 </span>
                 <button
                   type="submit"
                   name="student_id"
-                  value="{{student.s_roll}}"
+                  value="{{ student.s_roll }}"
                   class="delete-button"
                 >
                   <i class="fas fa-trash-alt"></i>
@@ -47,12 +48,8 @@
       </div>
       <div class="attendance-container">
         <div class="attendance-card">
-          <h2>
-            Connect to College Wi-Fi and Scan the QR Code to Mark Attendance
-          </h2>
-          {% comment %}
+          <h2>Connect to College Wi-Fi and Scan the QR Code to Mark Attendance</h2>
           <a href="{% url 'add_manually' %}">
-            {% endcomment %}
             <img
               src="{% static 'FacultyView/qrcode.png' %}"
               alt="QR Code"

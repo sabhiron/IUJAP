@@ -47,3 +47,11 @@ class Student(models.Model):
     
     def __str__(self) -> str:
         return f"{self.s_fname} {self.s_lname} - {self.s_roll} - {self.s_branch}({self.s_year}{self.s_section})"
+        
+class Subject(models.Model):
+    subject_name = models.CharField(max_length=50)
+    teacher = models.CharField(max_length=50)
+    # Add more fields as needed
+            
+    def __str__(self) -> str:
+        return self.subject_name

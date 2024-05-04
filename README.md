@@ -2,7 +2,7 @@
 
 # QR Attendance System
 
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/dbc0c061-76d0-45bb-b5da-7f4373ffd073)
+![QR Attendance System](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/dbc0c061-76d0-45bb-b5da-7f4373ffd073)
 
 </div>
 
@@ -14,22 +14,21 @@
 - [Setup](#setup)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [License](#license)
 - [Contributions](#contributions)
-- [Developers](#develpers)
+- [Developers](#developers)
 
 ## Overview
 
-The QR Code Attendance System is an efficient,fast and user-friendly tool for tracking attendance using QR codes. It utilizes HTML, CSS, and Django to create a web-based interface for marking attendance. This system is designed to work seamlessly when devices are connected to the __Same College Local Network__.
+The QR Attendance System is an efficient, fast, and user-friendly tool for tracking attendance using QR codes. It utilizes HTML, CSS, and Django to create a web-based interface for marking attendance. This system is designed to work seamlessly when devices are connected to the same college local network.
 
-The teacher/faculty can display the QR Code using classroom projector so that present students can scan and mark their attendance.
+The teacher/faculty can display the QR code using a classroom projector so that present students can scan and mark their attendance.
 
 ## Features
 
-- **Automatic IP Fetching:** It fetch your IPv4 address automatically and Generate a QR code based on that IP to enable connections within the classroom.
-- **Faculty Panel:** It has a Faculty View Panel that enables the teacher to remove duplicate or proxy attendances based on count.
-- **User-Friendly Interface:** A straightforward web interface for effortless attendance management.
-- **Real-Time Tracking:** Mark attendance by scanning QR codes with real-time updates.
+- **Automatic IP Fetching:** The system fetches your IPv4 address automatically and generates a QR code based on that IP to enable connections within the classroom.
+- **Faculty Panel:** It includes a faculty view panel that enables the teacher to remove duplicate or proxy attendances based on count.
+- **User-Friendly Interface:** The system provides a straightforward web interface for effortless attendance management.
+- **Real-Time Tracking:** Attendance can be marked by scanning QR codes with real-time updates.
 - **Accessibility:** Easily access attendance records for quick reference.
 
 ## Prerequisites
@@ -55,12 +54,12 @@ Before you begin, ensure you have the following prerequisites installed:
    cd QR-Attendance-System
    ```
 
-
-4. **Install dependencies:**
+3. **Install Dependencies:**
 
    ```
    pip install -r requirements.txt
    ```
+
 4. **Run the Django Server:**
 
    ```
@@ -71,58 +70,48 @@ Before you begin, ensure you have the following prerequisites installed:
 
    Open your web browser and go to `http://localhost:8000` to use the system.
 
-### Setting up Firewall settings for the first time
+### Setting up Firewall Settings for the First Time
 
 - Open Windows Defender Firewall Settings:
-
-   - Press Win + S to open the search bar.
-   - Type "Windows Defender Firewall" and select the corresponding result.
+  - Press Win + S to open the search bar.
+  - Type "Windows Defender Firewall" and select the corresponding result.
 
 - Create an Inbound Rule:
-
-   - On the left panel, click on "Advanced settings."
-   - In the left panel, select "Inbound Rules."
-   - In the right panel, click on "New Rule..." to open the New Inbound Rule Wizard.
+  - On the left panel, click on "Advanced settings."
+  - In the left panel, select "Inbound Rules."
+  - In the right panel, click on "New Rule..." to open the New Inbound Rule Wizard.
 
 - Select Rule Type:
-
-   - Choose "Port" and click "Next."
+  - Choose "Port" and click "Next."
 
 - Specify Port and Protocol:
-
-   - Choose "Specific local ports" and enter the port number your Django server is running on (e.g., 8000).
-   - Click "Next."
+  - Choose "Specific local ports" and enter the port number your Django server is running on (e.g., 8000).
+  - Click "Next."
 
 - Choose Action:
-
-   - Choose "Allow the connection" and click "Next."
+  - Choose "Allow the connection" and click "Next."
 
 - When Does the Rule Apply?
-
-   - Keep all three options (Domain, Private, Public) checked.
-   - Click "Next."
+  - Keep all three options (Domain, Private, Public) checked.
+  - Click "Next."
 
 - Specify Rule Name:
-
-   - Enter a name for your rule (e.g., "Django Server").
-   - Optionally, provide a description.
-   - Click "Finish."
+  - Enter a name for your rule (e.g., "Django Server").
+  - Optionally, provide a description.
+  - Click "Finish."
 
 - Check the Inbound Rules:
-
-   - In the left panel, click on "Inbound Rules."
-   - Find your newly created rule in the list.
+  - In the left panel, click on "Inbound Rules."
+  - Find your newly created rule in the list.
 
 - Test the Connection:
-
-   On another device within the same local network, try to access your Django server using the local IP address and port number or By simply scanning the displayed QR Code.
+  On another device within the same local network, try to access your Django server using the local IP address and port number or by simply scanning the displayed QR code.
 
 ## Usage
 
 1. **Open the System in Your Web Browser:**
 
    Access the system by opening your web browser and visiting `http://localhost:8000`.
-
 
 2. **Display QR Codes:**
 
@@ -139,20 +128,19 @@ Before you begin, ensure you have the following prerequisites installed:
 ## Screenshots
 
 ### Admin Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/e4c9f2d8-6b8e-44de-a63d-f7e5db45383e)
+![Admin Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/e4c9f2d8-6b8e-44de-a63d-f7e5db45383e)
 
 ### Student Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/a8e2f4a7-831c-4ac5-8e1b-c917a9ca9001)
+![Student Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/a8e2f4a7-831c-4ac5-8e1b-c917a9ca9001)
 
 ### Submission Successful Page
-![image](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/0f77779e-7648-4356-84c0-7db58b3e786c)
-
+![Submission Successful Page](https://github.com/AzeemIdrisi/QR-Attendance-System/assets/112647789/0f77779e-7648-4356-84c0-7db58b3e786c)
 
 ## Contributions
 
 We welcome contributions from the community! If you'd like to contribute to this project, please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ## Developers
-Created by __Team Hokage__ during __Live The Code 2.0__ Hackathon.
+Created by Team Hokage during the Live The Code 2.0 Hackathon.
 
-Contributors : [Mohd Azeem](https://github.com/AzeemIdrisi), [Dheeraj Jha](https://github.com/Dheerajjha451), [Shantanu Pant](https://github.com/Shanty34)
+Contributors: [Mohd Azeem](https://github.com/AzeemIdrisi), [Dheeraj Jha](https://github.com/Dheerajjha451), [Shantanu Pant](https://github.com/Shanty34)
