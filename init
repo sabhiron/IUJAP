@@ -12,9 +12,10 @@ function refresh() {
     echo "Refreshing..."
 }
 
-function pause() {
+function su() {
     # Add your pause logic here
-    echo "Pausing..."
+    python3 manage.py createsuperuser
+    echo "Creating superuser..."
 }
 
 function migrate() {
@@ -32,13 +33,13 @@ case "$1" in
     "refresh")
         refresh
         ;;
-    "pause")
-        pause
+    "su")
+        su
         ;;
     "migrate")
         migrate
         ;;
     *)
-        echo "Invalid option. Usage: ./start [start|refresh|pause|migrate]"
+        echo "Invalid option. Usage: ./start [start|refresh|su|migrate]"
         ;;
 esac
